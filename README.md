@@ -58,6 +58,27 @@ print("Decrypt:", xor.decrypt(en))
 In the provided code snippet, the `XOR` class from the `drcrypt.crypt` module is imported. The example demonstrates how to use the XOR encryption feature of `DrCrypt`. It encrypts the given text using the XOR cipher and a provided password. The encrypted text is then printed, followed by decrypting it using the same password and printing the decrypted result.
 
 
+Here's a simple example of how to use `DrCrypt` to generate an SHA-1 hash:
+
+```python
+from drcrypt.hash import SHA1
+
+data = "Hello, SHA-1!"
+sha1_hash = SHA1()
+sha1_hash.update(data.encode("utf-8"))
+sha1_hash.finalize()
+hashed = sha1_hash.hexdigest()
+
+print("Data:", data)
+print("SHA-1 Hash:", hashed)
+```
+
+In the provided code snippet, the `SHA1` class from the `drcrypt.hash` module is imported. This example demonstrates how to use `DrCrypt` to compute the SHA-1 hash of a given string (`data`). It initializes the SHA-1 hash object, updates it with the data, finalizes the hash computation, and then prints the original data and its corresponding SHA-1 hash.
+
+
+
+
+
 
 ## Documentation
 
