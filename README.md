@@ -47,9 +47,3 @@ For detailed documentation and examples, please refer to the [official documenta
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
-يرجى استبدال `your-docs-link-here` برابط الوثائق الخاصة بمكتبتك على منصة الوثائق المختارة.
-
-هذا المثال يقدم نظرة عامة على كيفية كتابة ملف README.md لمكتبتك باستخدام تنسيق Markdown. يمكنك تخصيص المعلومات والأمثلة والروابط وفقًا لاحتياجات مكتبتك.
