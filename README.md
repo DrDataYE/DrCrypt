@@ -110,6 +110,30 @@ print("MD5 Hash:", hashed)
 In the provided code snippet, the `MD5` class from the `drcrypt.hash` module is imported. This example demonstrates how to use `DrCrypt` to compute the MD5 hash of a given string (`data`). It initializes the MD5 hash object, updates it with the data, finalizes the hash computation, and then prints the original data and its corresponding MD5 hash.
 
 
+Here's an example of how to use `DrCrypt` to compute and compare MD5 hashes:
+
+```python
+from drcrypt.crypt import MD5, compare_hash
+
+data = "Hello, MD5!"
+md5_hash = MD5()
+md5_hash.update(data.encode("utf-8"))
+md5_hash.finalize()
+hashed = md5_hash.hexdigest()
+
+result = compare_hash(MD5(), data, hashed)
+
+if result:
+    print("Hashes match! The data matches the target hash.")
+else:
+    print("Hashes do not match. The data does not match the target hash.")
+```
+
+In the provided code snippet, the `MD5` class from the `drcrypt.crypt` module is used to compute an MD5 hash for a given string (`data`). The `compare_hash` function is then used to compare the computed hash with the target hash (`hashed`). The example demonstrates how to verify whether the data matches the target hash and prints a corresponding message.
+
+
+
+
 Here's an example of how to use the `Bcrypt` class from `DrCrypt` to perform secure password hashing and verification:
 
 ```python
@@ -152,7 +176,6 @@ print("Random String:", random_str)
 ```
 
 In the provided code snippet, the `Random` class from the `drcrypt.random` module is used. This example demonstrates how to use `DrCrypt` to generate random numbers and strings. It creates an instance of the `Random` class and then generates a random integer within the specified range and a random string with the specified characters and length.
-
 
 
 
