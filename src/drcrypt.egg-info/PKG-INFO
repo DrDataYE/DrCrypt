@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: drcrypt
+Version: 0.0.1
+Summary: Encryption and Decryption Text.
+Home-page: https://github.com/DrDataYE/DrCrypt
+Author: DrDataYE
+Author-email: drdstaye@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# DrCrypt
+
+### to install:
+```bash
+pip3 install drcrypt
+```
