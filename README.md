@@ -109,6 +109,32 @@ print("Decrypted:", decrypt_aes(en, key).decode("utf-8"))
 In the provided code snippet, the `encrypt_aes` and `decrypt_aes` functions from the `drcrypt.crypt` module are imported. This example demonstrates how to use `DrCrypt` to encrypt and decrypt data using the Advanced Encryption Standard (AES) algorithm. It encrypts the given text using the provided key, prints the original text, the encrypted result, and then decrypts the encrypted text using the same key and prints the decrypted result.
 
 
+Here's an example of how to use the `Bcrypt` class from `DrCrypt` to perform secure password hashing and verification:
+
+```python
+from drcrypt.hash import Bcrypt
+
+# Create an instance of Bcrypt
+bcrypt_hasher = Bcrypt()
+
+# Hash a password and generate a salt
+password = "mysecretpassword"
+salt = bcrypt_hasher.generate_salt()
+hashed_password = bcrypt_hasher.bcrypt_hash(password, salt)
+
+# Verify an entered password
+input_password = "mysecretpassword"
+if bcrypt_hasher.verify_password(input_password, hashed_password):
+    print("Password Matched!")
+else:
+    print("Password Does Not Match!")
+```
+
+In the provided code snippet, the `Bcrypt` class from the `drcrypt.hash` module is used. This example demonstrates how to use `DrCrypt` to securely hash and verify passwords using the bcrypt algorithm. It creates an instance of the `Bcrypt` class, hashes a password with a generated salt, and then verifies an entered password against the hashed password.
+
+
+
+
 
 
 ## Documentation
