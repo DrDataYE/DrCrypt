@@ -57,6 +57,24 @@ print("SHA-1 Hash:", hashed)
 In the provided code snippet, the `SHA1` class from the `drcrypt.hash` module is imported. This example demonstrates how to use `DrCrypt` to compute the SHA-1 hash of a given string (`data`). It initializes the SHA-1 hash object, updates it with the data, finalizes the hash computation, and then prints the original data and its corresponding SHA-1 hash.
 
 
+Here's a simple example of how to use `DrCrypt` to generate an SHA-256 hash:
+
+```python
+from drcrypt.hash import SHA256
+
+data = "Hello, SHA-256!"
+sha256_hash = SHA256()
+sha256_hash.update(data.encode("utf-8"))
+sha256_hash.finalize()
+hashed = sha256_hash.hexdigest()
+
+print("Data:", data)
+print("SHA-256 Hash:", hashed)
+```
+
+In the provided code snippet, the `SHA256` class from the `drcrypt.hash` module is imported. This example demonstrates how to use `DrCrypt` to compute the SHA-256 hash of a given string (`data`). It initializes the SHA-256 hash object, updates it with the data, finalizes the hash computation, and then prints the original data and its corresponding SHA-256 hash.
+
+
 
 
 
