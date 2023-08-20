@@ -39,6 +39,23 @@ print("Decrypt:", xor.decrypt(en))
 In the provided code snippet, the `XOR` class from the `drcrypt.crypt` module is imported. The example demonstrates how to use the XOR encryption feature of `DrCrypt`. It encrypts the given text using the XOR cipher and a provided password. The encrypted text is then printed, followed by decrypting it using the same password and printing the decrypted result.
 
 
+Here's a simple example of how to use `DrCrypt` to perform AES encryption and decryption:
+
+```python
+from drcrypt.crypt import encrypt_aes, decrypt_aes
+
+key = "MyTestPassword!!".encode("utf-8")
+text = "Hello, world"
+en = encrypt_aes(text, key)
+
+print("Text:", text, end="\n\n")
+print("Encrypted:", en.decode("utf-8"))
+print("Decrypted:", decrypt_aes(en, key).decode("utf-8"))
+```
+
+In the provided code snippet, the `encrypt_aes` and `decrypt_aes` functions from the `drcrypt.crypt` module are imported. This example demonstrates how to use `DrCrypt` to encrypt and decrypt data using the Advanced Encryption Standard (AES) algorithm. It encrypts the given text using the provided key, prints the original text, the encrypted result, and then decrypts the encrypted text using the same key and prints the decrypted result.
+
+
 Here's a simple example of how to use `DrCrypt` to generate an SHA-1 hash:
 
 ```python
@@ -91,22 +108,6 @@ print("MD5 Hash:", hashed)
 ```
 
 In the provided code snippet, the `MD5` class from the `drcrypt.hash` module is imported. This example demonstrates how to use `DrCrypt` to compute the MD5 hash of a given string (`data`). It initializes the MD5 hash object, updates it with the data, finalizes the hash computation, and then prints the original data and its corresponding MD5 hash.
-
-Here's a simple example of how to use `DrCrypt` to perform AES encryption and decryption:
-
-```python
-from drcrypt.crypt import encrypt_aes, decrypt_aes
-
-key = "MyTestPassword!!".encode("utf-8")
-text = "Hello, world"
-en = encrypt_aes(text, key)
-
-print("Text:", text, end="\n\n")
-print("Encrypted:", en.decode("utf-8"))
-print("Decrypted:", decrypt_aes(en, key).decode("utf-8"))
-```
-
-In the provided code snippet, the `encrypt_aes` and `decrypt_aes` functions from the `drcrypt.crypt` module are imported. This example demonstrates how to use `DrCrypt` to encrypt and decrypt data using the Advanced Encryption Standard (AES) algorithm. It encrypts the given text using the provided key, prints the original text, the encrypted result, and then decrypts the encrypted text using the same key and prints the decrypted result.
 
 
 Here's an example of how to use the `Bcrypt` class from `DrCrypt` to perform secure password hashing and verification:
