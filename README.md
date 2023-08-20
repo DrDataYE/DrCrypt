@@ -116,7 +116,7 @@ In the provided code snippet, the `MD5` class from the `drcrypt.hash` module is 
 Here's an example of how to use `DrCrypt` to compute and compare MD5 hashes:
 
 ```python
-from drcrypt.crypt import MD5, compare_hash
+from drcrypt.hash import MD5, compare_hash
 
 data = "Hello, MD5!"
 md5_hash = MD5()
