@@ -25,10 +25,10 @@ pip install drcrypt
 Here's a quick example of how to use `DrCrypt` to hash a password:
 
 ```python
-from drcrypt import MD5Hash
+from drcrypt.hash import MD5
 
 password = "mysecretpassword"
-hasher = MD5Hash()
+hasher = MD5()
 hashed_password = hasher.hash_password(password)
 
 print("Original Password:", password)
