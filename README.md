@@ -1,4 +1,3 @@
-```markdown
 # DrCrypt - Python Encryption Library
 
 ![PyPI](https://img.shields.io/pypi/v/drcrypt)
