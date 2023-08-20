@@ -22,25 +22,6 @@ pip install drcrypt
 
 ## Usage
 
-Here's a quick example of how to use `DrCrypt` to hash a password:
-
-```python
-from drcrypt.hash import MD5
-
-password = "mysecretpassword"
-hasher = MD5()
-hashed_password = hasher.hash_password(password)
-
-print("Original Password:", password)
-print("Hashed Password:", hashed_password)
-
-if hasher.verify_password("mysecretpassword", hashed_password):
-    print("Password Matched!")
-else:
-    print("Password Does Not Match!")
-```
-
-
 Here's a quick example of how to use `DrCrypt` to perform XOR encryption:
 
 ```python
