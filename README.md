@@ -40,6 +40,25 @@ else:
     print("Password Does Not Match!")
 ```
 
+
+Here's a quick example of how to use `DrCrypt` to perform XOR encryption:
+
+```python
+from drcrypt.crypt import XOR
+
+text = "Hello, World"
+xor = XOR("MyPassword", "utf-8")
+en = xor.encrypt(text)
+
+print("Text:", text, end="\n\n")
+print("Encrypt:", en)
+print("Decrypt:", xor.decrypt(en))
+```
+
+In the provided code snippet, the `XOR` class from the `drcrypt.crypt` module is imported. The example demonstrates how to use the XOR encryption feature of `DrCrypt`. It encrypts the given text using the XOR cipher and a provided password. The encrypted text is then printed, followed by decrypting it using the same password and printing the decrypted result.
+
+
+
 ## Documentation
 
 For detailed documentation and examples, please refer to the [official documentation](https://your-docs-link-here).
