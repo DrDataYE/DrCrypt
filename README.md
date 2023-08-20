@@ -133,6 +133,24 @@ else:
 In the provided code snippet, the `Bcrypt` class from the `drcrypt.hash` module is used. This example demonstrates how to use `DrCrypt` to securely hash and verify passwords using the bcrypt algorithm. It creates an instance of the `Bcrypt` class, hashes a password with a generated salt, and then verifies an entered password against the hashed password.
 
 
+Here's an example of how to use the `Random` class from `DrCrypt` to generate random numbers and strings:
+
+```python
+from drcrypt.random import Random
+
+# Create an instance of Random
+r = Random()
+
+# Generate a random integer between 1 and 10
+random_int = r.randint(1, 10)
+print("Random Integer:", random_int)
+
+# Generate a random string with characters "AaBbCcDd1234567890" and length 10
+random_str = r.randstr(10, "AaBbCcDd1234567890")
+print("Random String:", random_str)
+```
+
+In the provided code snippet, the `Random` class from the `drcrypt.random` module is used. This example demonstrates how to use `DrCrypt` to generate random numbers and strings. It creates an instance of the `Random` class and then generates a random integer within the specified range and a random string with the specified characters and length.
 
 
 
