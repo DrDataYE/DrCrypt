@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='drcrypt',
-    version="0.0.1",
+    version="0.0.2",
     author='DrDataYE',
     author_email='drdstaye@gmail.com',
     description='Encryption and Decryption Text.',

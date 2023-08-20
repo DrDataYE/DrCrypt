@@ -3,6 +3,8 @@ README.md
 setup.py
 src/drcrypt/__init__.py
 src/drcrypt/crypt.py
+src/drcrypt/hash.py
+src/drcrypt/random.py
 src/drcrypt.egg-info/PKG-INFO
 src/drcrypt.egg-info/SOURCES.txt
 src/drcrypt.egg-info/dependency_links.txt
