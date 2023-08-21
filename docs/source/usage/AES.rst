@@ -1,4 +1,4 @@
-Using AES Encryption with drcrypt
+Using AES Encryption
 ==================================
 
 Introduction
