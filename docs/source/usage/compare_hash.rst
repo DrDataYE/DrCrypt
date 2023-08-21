@@ -22,11 +22,11 @@ Let's delve deep into the code snippet you provided and understand each part:
 
 1. **Importing the MD5 Class and compare_hash Function:**
 
-   To start our journey, we import the `MD5` class from the `drcrypt.hash` module, as well as the `compare_hash` function from the same module. The latter function will be our guide in comparing hashes:
+   To start our journey, we import the `MD5` class from the `drcrypt` module, as well as the `compare_hash` function from the same module. The latter function will be our guide in comparing hashes:
 
    .. code-block:: python
 
-      from drcrypt.hash import MD5, compare_hash
+      from drcrypt import MD5, compare_hash
 
 2. **Creating and Finalizing the Hash:**
 
