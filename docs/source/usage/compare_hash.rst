@@ -1,4 +1,4 @@
-Creating and Comparing MD5 Hashes with drcrypt
+Creating and Comparing MD5 Hashes
 ===============================================
 
 Introduction
