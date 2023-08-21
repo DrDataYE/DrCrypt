@@ -1,23 +1,23 @@
 Tutorials
 =========
 
-Explore a series of tutorials that delve into various cryptographic operations using the `drcrypt` library.
+Here is a list of tutorials that cover different cryptographic operations and how to perform them using the `drcrypt` library.
 
 .. toctree::
-    :caption: Tutorial List
+    :caption: Classes
 
     SHA-1
     SHA-256
     MD5
-    Comparing Hashes
-    Dcrypt
-    XOR Encryption
-    AES Encryption
-    Random Number Generation
+    compare_hash
+    dcrypt
+    XOR
+    AES
+    Random
 
-Feel free to dive into each tutorial to deepen your understanding of cryptographic techniques and the powerful capabilities offered by the `drcrypt` library.
+Feel free to explore each tutorial to enhance your understanding of cryptographic operations and the capabilities of the `drcrypt` library.
 
 Note
 ----
 
-Ensure you have the `drcrypt` library installed before experimenting with the provided code examples. You can easily install it using the command: ``pip install drcrypt``.
+Make sure you have the `drcrypt` library installed before trying out the code examples. You can install it using the command ``pip install drcrypt``.
