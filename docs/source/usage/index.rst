@@ -9,14 +9,17 @@ This is the index page for a series of tutorials on using the `drcrypt` library 
 Tutorials
 ---------
 
-1. `Creating and Comparing MD5 Hashes with drcrypt <MD5.rst>`_
-2. `Bcrypt Password Hashing and Verification with drcrypt <bcrypt.rst>`_
-3. `Generating Random Numbers and Strings with drcrypt <Random.rst>`_
-4. `Using SHA-1 Hashing with drcrypt <SHA-1.rst>`_
-5. `Creating a SHA-256 Hash with drcrypt <SHA-256.rst>`_
-6. `Using the XOR Cryptographic Operation with drcrypt <XOR.rst>`_
-7. `AES Encryption and Decryption with drcrypt <AES.rst>`_
-8. `Compare Hash <compare_hash.rst>`_
+.. toctree::
+    :caption: Classes
+
+    SHA-1.rst
+    SHA-256.rst
+    MD5.rst
+    compare_hash.rst
+    dcrypt.rst
+    XOR.rst
+    AES.rst
+    Random.rst
 
 Feel free to explore each tutorial to enhance your understanding of cryptographic operations and the capabilities of the `drcrypt` library.
 
