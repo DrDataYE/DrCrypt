@@ -1,4 +1,4 @@
-Quick Start Guide: Using XOR Encryption with drcrypt
+Quick Start
 ====================================================
 
 Introduction
