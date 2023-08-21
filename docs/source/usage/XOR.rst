@@ -1,4 +1,4 @@
-Using XOR Encryption with drcrypt
+Using XOR Encryption
 ==================================
 
 Introduction
