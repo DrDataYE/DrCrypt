@@ -1,4 +1,4 @@
-# <img src="docs/logo.png" alt="Logo" width="35" height="35"> DrCrypt - Python Encryption Library
+# <img src="docs/logo.png" alt="Logo" width="35" height="35" style="padding:0px;"> DrCrypt - Python Encryption Library
 
 ![PyPI](https://img.shields.io/pypi/v/drcrypt)
 ![License](https://img.shields.io/pypi/l/drcrypt)
