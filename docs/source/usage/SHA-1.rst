@@ -1,4 +1,4 @@
-Using SHA-1 Hashing with drcrypt
+Using SHA-1 Hashing
 ===============================
 
 Introduction
