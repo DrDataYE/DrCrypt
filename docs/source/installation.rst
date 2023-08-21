@@ -6,30 +6,18 @@ Installation
     I'm going to install it on a Linux machine if you're on windows or macOS you can
     install it from here `MongoDB installation <https://www.mongodb.com/docs/manual/installation/#mongodb-installation-tutorials>`_
 
-Let's first install MongoDB. You can install it as follows:
+# drcrypt Library
 
-.. code-block:: shell
+The `drcrypt` library is a powerful cryptographic toolkit that provides various encryption and decryption functionalities. It simplifies the process of securing your data with advanced encryption algorithms.
 
-    sudo apt install mongodb
+## Installation
 
-Now let's start MongoDB server
+Before using `drcrypt`, you need to have Python and pip installed. Also, make sure you have MongoDB installed on your machine.
 
-.. code-block:: shell
+1. **Installing drcrypt:**
 
-    sudo systemctl start mongodb  
+   You can install `drcrypt` using pip. Open your terminal or command prompt and run:
 
-
-Let's check if the server is running
-
-.. code-block:: shell
-
-    sudo systemctl status mongodb
-
-If you see ``active (running)``, then everything is fine and you can continue with me.
-
-
-Now lets install MongoFire. You can install it as follows:
-
-.. code-block:: shell
-
-    pip3 install mongofire
+   ```shell
+   pip install drcrypt
+    ```
