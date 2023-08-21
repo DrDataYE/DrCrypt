@@ -116,7 +116,8 @@ In the provided code snippet, the `MD5` class from the `drcrypt.hash` module is 
 Here's an example of how to use `DrCrypt` to compute and compare MD5 hashes:
 
 ```python
-from drcrypt.hash import MD5, compare_hash
+from drcrypt.hash import MD5
+from drcrypt import compare_hash
 
 data = "Hello, MD5!"
 md5_hash = MD5()
@@ -166,7 +167,7 @@ Bcrypt` class from the `drcrypt.hash` module is used. This example demonstrates 
 Here's an example of how to use the `Random` class from `DrCrypt` to generate random numbers and strings:
 
 ```python
-from drcrypt.random import Random
+from drcrypt import Random
 
 # Create an instance of Random
 r = Random()
