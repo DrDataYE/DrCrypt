@@ -17,7 +17,5 @@ Here is a list of tutorials that cover different cryptographic operations and ho
 
 Feel free to explore each tutorial to enhance your understanding of cryptographic operations and the capabilities of the `drcrypt` library.
 
-Note
-----
-
-Make sure you have the `drcrypt` library installed before trying out the code examples. You can install it using the command ``pip install drcrypt``.
+.. note::
+    Make sure you have the `drcrypt` library installed before trying out the code examples. You can install it using the command ``pip install drcrypt``.
