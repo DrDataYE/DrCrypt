@@ -1,4 +1,4 @@
-Bcrypt Password Hashing and Verification with drcrypt
+Bcrypt Password Hashing and Verification
 =====================================================
 
 Introduction
