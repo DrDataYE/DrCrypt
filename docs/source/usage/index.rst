@@ -10,7 +10,7 @@ Explore a series of tutorials that delve into various cryptographic operations u
     SHA-256
     MD5
     Comparing Hashes
-    Decryption
+    Dcrypt
     XOR Encryption
     AES Encryption
     Random Number Generation
