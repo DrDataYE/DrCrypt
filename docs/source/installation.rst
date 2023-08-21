@@ -18,6 +18,6 @@ Before using `drcrypt`, you need to have Python and pip installed. Also, make su
 
    You can install `drcrypt` using pip. Open your terminal or command prompt and run:
 
-   ```code-block:: shell
+   .. code-block:: shell
    pip install drcrypt
-    ```
+    
