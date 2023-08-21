@@ -1,4 +1,4 @@
-Creating an MD5 Hash with drcrypt
+Creating an MD5 Hash
 ==================================
 
 Introduction
