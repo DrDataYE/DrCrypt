@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'MongoFire'
+project = 'DrCrypt'
 copyright = '2023, PSH-TEAM'
-author = 'PSH-TEAM'
+author = 'DrData'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
