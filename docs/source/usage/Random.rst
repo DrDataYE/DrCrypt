@@ -1,4 +1,4 @@
-Generating Random Numbers and Strings with drcrypt
+Generating Random Numbers and Strings
 ===================================================
 
 Introduction
