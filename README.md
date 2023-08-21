@@ -1,4 +1,4 @@
-# DrCrypt - Python Encryption Library
+# ![Logo](docs/logo.png)  DrCrypt - Python Encryption Library
 
 ![PyPI](https://img.shields.io/pypi/v/drcrypt)
 ![License](https://img.shields.io/pypi/l/drcrypt)
