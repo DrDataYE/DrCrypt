@@ -1,62 +1,57 @@
-Quick start
-===========
+Quick Start Guide: Using XOR Encryption with drcrypt
+====================================================
 
-You need first to initialize the client in your ``main.py`` file:
+Introduction
+------------
 
-.. code-block:: python
+This quick start guide demonstrates how to use the XOR encryption provided by the `drcrypt` library to encrypt and decrypt text. We'll show you a simple example using Python code.
 
-   from mongofire import MongoFire
-   MongoFire.initialize('mongodb://localhost:27017/')
+Prerequisites
+-------------
 
-And then you can use it in any file in your project like this:
+Before you begin, make sure you have the `drcrypt` library installed. You can install it using the following command:
 
-.. code-block:: python
+.. code-block:: shell
 
-   from mongofire import MongoDB
-   db = MongoDB('myAppDatabase')
+   pip install drcrypt
 
-Set a Document
---------------
+Getting Started
+---------------
 
-.. include:: usage/document.rst
-   :start-after: 
-      set
-      ---
-   :end-before:
-      update
-      ------
+Follow the steps below to encrypt and decrypt text using XOR encryption:
 
-Update a Document
------------------
+1. **Import the XOR Class:**
 
-.. include:: usage/document.rst
-   :start-after: 
-      update
-      ------
-   :end-before:
-      .. end_update_quick_srart
+   In your Python code, start by importing the `XOR` class from the `drcrypt.crypt` module:
 
-Add a Document
---------------
+   .. code-block:: python
 
-Sometimes the document ID doesn't make sense, and it's okay to be random. In that case, you can use the ``add`` method instead of the ``set`` method.
+      from drcrypt.crypt import XOR
 
-.. code-block:: python
+2. **Encrypting and Decrypting Text:**
 
-   status, doc_ref = db.collection('users').add({
-       'name': 'Max',
-       'age': 30,
-   })
+   Define the text you want to encrypt. For example, let's use the text "Hello, World". Then, create an instance of the `XOR` class with a password and text encoding:
 
-You can get the randomly generated ID by ``doc_ref.id``.
+   .. code-block:: python
 
-Delete a Document
------------------
+      text = "Hello, World"
+      xor = XOR("MyPassword", "utf-8")
 
-.. include:: usage/document.rst
-   :start-after: 
-      delete
-      ------
-   :end-before:
-      .. end_delete_quick_srart
+   Use the `encrypt` method to encrypt the text:
 
+   .. code-block:: python
+
+      en = xor.encrypt(text)
+
+   You can now print the original text, the encrypted text, and decrypt the encrypted text to get the original text back:
+
+   .. code-block:: python
+
+      print("Original Text:", text, end="\n\n")
+      print("Encrypted Text:", en)
+      print("Decrypted Text:", xor.decrypt(en))
+
+Summary
+-------
+
+You've successfully learned how to use XOR encryption with the `drcrypt` library to secure your text data. This is a simple example, and you can explore more advanced features of the library for more complex scenarios.
