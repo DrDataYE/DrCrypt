@@ -1,0 +1,74 @@
+Creating a SHA-256 Hash with drcrypt
+====================================
+
+Introduction
+------------
+
+Welcome to this guide where we'll have some fun exploring how to create a SHA-256 hash using the `drcrypt` library. SHA-256 (Secure Hash Algorithm 256) is a widely used cryptographic hash function that produces a fixed-size hash value.
+
+Prerequisites
+-------------
+
+Before we dive in, make sure you have the `drcrypt` library installed. If not, you can install it using the following command:
+
+.. code-block:: shell
+
+   pip install drcrypt
+
+Understanding the Code
+----------------------
+
+Let's break down the code snippet you provided and have some fun understanding each part:
+
+1. **Importing the SHA256 Class:**
+
+   To begin our journey, we start by importing the `SHA256` class from the `drcrypt.hash` module. This class provides us with the power to generate SHA-256 hashes.
+
+   .. code-block:: python
+
+      from drcrypt.hash import SHA256
+
+2. **Creating and Updating the Hash:**
+
+   Our adventure begins with a whimsical data string to hash: `"Hello, SHA-256!"`. We create an instance of the `SHA256` class:
+
+   .. code-block:: python
+
+      data = "Hello, SHA-256!"
+      sha256_hash = SHA256()
+
+   We then add our data to the mix by using the `update` method. Remember, data must be transformed into bytes using UTF-8 encoding:
+
+   .. code-block:: python
+
+      sha256_hash.update(data.encode("utf-8"))
+
+3. **Finalizing the Hash and Getting the Hashed Value:**
+
+   As we approach our destination, we finalize our hash adventure by calling the `finalize` method:
+
+   .. code-block:: python
+
+      sha256_hash.finalize()
+
+   The treasure we seek, the hashed value in hexadecimal, is acquired using the `hexdigest` method:
+
+   .. code-block:: python
+
+      hashed = sha256_hash.hexdigest()
+
+4. **Displaying Our Achievements:**
+
+   As we reach the end of our journey, we proudly present our achievements by printing the original data and the glorious SHA-256 hash:
+
+   .. code-block:: python
+
+      print("Data:", data)
+      print("SHA-256 Hash:", hashed)
+
+Conclusion
+-----------
+
+We've embarked on a thrilling adventure using the `drcrypt` library to create a SHA-256 hash. Hashing is a key technique in cryptography and data verification.
+
+Feel free to continue your exploration of cryptographic capabilities provided by the `drcrypt` library and enjoy the security they bring!
