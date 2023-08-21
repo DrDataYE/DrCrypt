@@ -22,11 +22,11 @@ Let's dive deep into the code snippet you provided and understand each part:
 
 1. **Importing the Random Class:**
 
-   Our journey begins with the import of the `Random` class from the `drcrypt.random` module. This class will be our guide in generating random numbers and strings:
+   Our journey begins with the import of the `Random` class from the `drcrypt` module. This class will be our guide in generating random numbers and strings:
 
    .. code-block:: python
 
-      from drcrypt.random import Random
+      from drcrypt import Random
 
 2. **Creating an Instance of Random:**
 
