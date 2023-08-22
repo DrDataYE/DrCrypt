@@ -1,4 +1,4 @@
-from drcrypt.crypt import MD5, compare_hash
+from drcrypt import MD5, compare_hash
 
 
 data = "Hello, MD5!"
