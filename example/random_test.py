@@ -1,4 +1,4 @@
-from drcrypt,random import Random
+from drcrypt import Random
 
 r = Random()
 
