@@ -1,4 +1,4 @@
-from drscan.hash import Bcrypt
+from drcrypt import Bcrypt
 
 
 # مثال على استخدام الكلاس
