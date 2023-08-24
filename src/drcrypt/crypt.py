@@ -1,4 +1,71 @@
 import random
+import math
+
+
+class RSA:
+
+    def __init__(
+        self,
+        text,
+        public_key=None,
+        private_key=None,
+    ):
+        self.text = text
+        self.p_key = public_key
+        self.q_key = private_key
+        self.encoded_text = None
+        self.public_key = None
+        self.private_key = None
+
+    @staticmethod
+    def is_prime(num):
+        if num < 2:
+            return False
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                return False
+        return True
+
+    def generate_prime_number(self):
+        prime = random.randint(2, 100)
+        while not self.is_prime(prime):
+            prime = random.randint(2, 100)
+        return prime
+
+    def extended_gcd(self, a, b):
+        if a == 0:
+            return b, 0, 1
+        _gcd, x1, y1 = self.extended_gcd(b % a, a)
+        x = y1 - (b // a) * x1
+        y = x1
+        return _gcd, x, y
+
+    def keys(self):
+        if not self.p_key and not self.q_key:
+            self.p_key = self.generate_prime_number()
+            self.q_key = self.generate_prime_number()
+
+        phi = (self.p_key - 1) * (self.q_key - 1)
+        temp = random.randint(2, phi - 1)
+        while math.gcd(temp, phi) != 1:
+            e = random.randint(2, phi - 1)
+        _, d, _ = self.extended_gcd(temp, phi)
+        d = d % phi
+        self.public_key, self.private_key = (temp, self.p_key * self.q_key), (d, self.p_key * self.q_key)
+        return self.public_key, self.private_key
+
+    def encrypt(self, text=None):
+        if not text:
+            text = self.encoded_text
+        encode_, n = self.public_key
+        self.encoded_text = [pow(ord(char), encode_, n) for char in text]
+        return self.encoded_text
+
+    def decrypt(self, text=None):
+        if not text:
+            text = self.encoded_text
+        decode_, n = self.private_key
+        return ''.join([chr(pow(char, decode_, n)) for char in text])
 
 
 class XOR:
