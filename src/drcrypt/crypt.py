@@ -16,6 +16,7 @@ class RSA:
         self.encoded_text = None
         self.public_key = None
         self.private_key = None
+        self.keys()
 
     @staticmethod
     def is_prime(num):
@@ -44,19 +45,18 @@ class RSA:
         if not self.p_key and not self.q_key:
             self.p_key = self.generate_prime_number()
             self.q_key = self.generate_prime_number()
-
         phi = (self.p_key - 1) * (self.q_key - 1)
         temp = random.randint(2, phi - 1)
         while math.gcd(temp, phi) != 1:
-            e = random.randint(2, phi - 1)
+            temp = random.randint(2, phi - 1)
         _, d, _ = self.extended_gcd(temp, phi)
         d = d % phi
         self.public_key, self.private_key = (temp, self.p_key * self.q_key), (d, self.p_key * self.q_key)
         return self.public_key, self.private_key
 
     def encrypt(self, text=None):
-        if not text:
-            text = self.encoded_text
+        if not text and not self.encoded_text and self.text:
+            text = self.text
         encode_, n = self.public_key
         self.encoded_text = [pow(ord(char), encode_, n) for char in text]
         return self.encoded_text
@@ -69,7 +69,7 @@ class RSA:
 
 
 class XOR:
-    'Exclusive OR Cryption'
+    """Exclusive OR Cryption"""
     def __init__(self,mykey,encoding="utf-8") :
         self.encoding = encoding
         self.key = text_to_bits(mykey)
