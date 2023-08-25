@@ -2,10 +2,9 @@
 
 
 ![License](https://img.shields.io/pypi/l/drcrypt)
-    <a href=""><img src="https://img.shields.io/cocoapods/l/Cocoapods"></a>
-    ![PyPI](https://img.shields.io/pypi/v/drcrypt)
-    <a href=""><img src="https://img.shields.io/github/languages/code-size/DrDataYE/DrCrypt"></a>
-    <a href=""><img src="https://img.shields.io/pypi/format/drcrypt?color=green&logo=pypi&logoColor=green"></a>
+![PyPI](https://img.shields.io/pypi/v/drcrypt)
+<a href=""><img src="https://img.shields.io/github/languages/code-size/DrDataYE/DrCrypt"></a>
+<a href=""><img src="https://img.shields.io/pypi/format/drcrypt?color=green&logo=pypi&logoColor=green"></a>
 <!--     <a href="https://pepy.tech/project/drcrypt"><img alt="Build Status" src="https://pepy.tech/badge/drcrypt"></a> -->
 
 DrCrypt is a Python encryption library that provides various cryptographic functions for your projects. It aims to simplify encryption tasks and provide a user-friendly interface for common encryption algorithms.
