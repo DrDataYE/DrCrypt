@@ -189,7 +189,7 @@ In the provided code snippet, the `Random` class from the `drcrypt.random` modul
 
 ## Documentation
 
-For detailed documentation and examples, please refer to the [official documentation](#).
+For detailed documentation and examples, please refer to the [official documentation](drcrypt.readthedocs.io).
 
 ## License
 
