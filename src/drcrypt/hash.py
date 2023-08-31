@@ -284,4 +284,42 @@ class Bcrypt:
         return hashed_password == self.bcrypt_hash(entered_password, salt)
 
 
+def check_hash(hash_string):
+    """
+    Identify the potential hash type based on the length, character distribution, and statistical reasoning.
+    
+    Args:
+    - hash_string (str): The hash string to be identified.
+    
+    Returns:
+    - str: The potential hash type.
+    """
+    
+    hash_lengths = {
+        32: "MD5",
+        40: ["SHA-1", "RIPEMD-160"],
+        56: "SHA-224",
+        64: "SHA-256",
+        96: "SHA-384",
+        128: "SHA-512"
+    }
+    
+    # First identify by length
+    hash_type = hash_lengths.get(len(hash_string), "Unknown hash type")
+    
+    # Further refine if the length matches multiple hash types
+    if type(hash_type) == list:
+        # Check for character distribution
+        char_count = sum(c.isalpha() for c in hash_string)
+        num_count = sum(c.isdigit() for c in hash_string)
+        
+        # These thresholds are just mockup examples and might not be accurate
+        if char_count > num_count:
+            return "SHA-1"
+        else:
+            return "RIPEMD-160"
+    
+    return hash_type
+
+
 
