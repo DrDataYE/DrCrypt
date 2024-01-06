@@ -2,6 +2,87 @@ import random
 import math
 
 
+class SDES:
+	"""
+	 It looks like you've shared the class structure for a Simplified Data Encryption Standard (SDES) implementation in Python. This class seems to define several key components of the SDES algorithm, such as permutation and substitution boxes (P10, P8, P4, IP, IP_inv, EP, S0, S1).
+	"""	
+	P10, P8, P4, IP, IP_inv, EP, S0, S1 = [
+		[3, 5, 2, 7, 4, 10, 1, 9, 8, 6],
+		[6, 3, 7, 4, 8, 5, 10, 9],
+		[2, 4, 3, 1],
+		[2, 6, 3, 1, 4, 8, 5, 7],
+		[4, 1, 3, 5, 7, 2, 8, 6],
+		[4, 1, 2, 3, 2, 3, 4, 1],
+		[
+			[1, 0, 3, 2],
+			[3, 2, 1, 0],
+			[0, 2, 1, 3],
+			[3, 1, 3, 2],
+		],
+		[
+			[0, 1, 2, 3],
+			[2, 0, 1, 3],
+			[3, 0, 1, 0],
+			[2, 1, 0, 3],		
+		],			
+	]
+
+	def __init__(self, key):
+		self.key = key
+		self.k1, self.k2 = self.generate_keys()
+
+	def permute(self, k, arr):
+		return ''.join([k[i - 1] for i in arr])
+
+	def left_shift(self, k):
+		return k[1:] + k[:1]
+
+	def xor(self, a, b):
+		return ''.join(['0' if i == j else '1' for i, j in zip(a, b)])
+
+	def lookup_in_sbox(self, bits, sbox):
+		row = int(bits[0] + bits[3], 2)
+		col = int(bits[1] + bits[2], 2)
+		return format(sbox[row][col], '02b')
+
+	def F(self, right, sk):
+		expanded = self.permute(right, SDES.EP)
+		xored = self.xor(expanded, sk)
+		left_half, right_half = xored[:4], xored[4:]
+		left_output = self.lookup_in_sbox(left_half, SDES.S0)
+		right_output = self.lookup_in_sbox(right_half, SDES.S1)
+		return self.permute(left_output + right_output, SDES.P4)
+
+	def fK(self, bits, sk):
+		left, right = bits[:4], bits[4:]
+		return self.xor(left, self.F(right, sk)) + right
+
+	def generate_keys(self):
+		key = self.permute(self.key, SDES.P10)
+		left, right = key[:5], key[5:]
+		left, right = self.left_shift(left), self.left_shift(right)
+		k1 = self.permute(left + right, SDES.P8)
+		left, right = self.left_shift(left), self.left_shift(right)
+		left, right = self.left_shift(left), self.left_shift(right)
+		k2 = self.permute(left + right, SDES.P8)
+		return k1, k2
+
+	def encrypt(self, plaintext):
+		bits = self.permute(plaintext, SDES.IP)
+		bits = self.fK(bits, self.k1)
+		bits = bits[4:] + bits[:4]
+		bits = self.fK(bits, self.k2)
+		return self.permute(bits, SDES.IP_inv)
+
+	def decrypt(self, ciphertext):
+		bits = self.permute(ciphertext, SDES.IP)
+		bits = self.fK(bits, self.k2)
+		bits = bits[4:] + bits[:4]
+		bits = self.fK(bits, self.k1)
+		return self.permute(bits, SDES.IP_inv)
+
+
+
 class RSA:
 
     def __init__(
